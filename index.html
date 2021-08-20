@@ -33,35 +33,36 @@
                     <div>
                         <h4>Memory</h4>
 
-                        <button class="btn-hover px-3 py-1 rounded border text-center bg-light">8GB unified
+                        <button id="8GB-memory-btn" class="btn-hover px-3 py-1 rounded border text-center bg-light">8GB unified
                             memory</button>
 
 
-                        <button class="btn-hover px-3 py-1  rounded border text-center bg-light">16GB unified
+                        <button id="16GB-memory-btn"  class="btn-hover px-3 py-1  rounded border text-center bg-light">16GB unified
                             memory</button>
 
                     </div>
 
                     <div class="my-5">
                         <h4>Storage</h4>
-                        <button class="btn-hover px-2 py-1 rounded border text-center bg-light">256GB SSD
+                        <button id="256GB-storage-btn" class="btn-hover px-2 py-1 rounded border text-center bg-light">256GB SSD
                             storage</button>
 
-                        <button class="btn-hover px-2 py-1  rounded border text-center bg-light">512GB SSD
+                        <button id="512GB-storage-btn" class="btn-hover px-2 py-1  rounded border text-center bg-light">512GB SSD
                             storage</button>
 
 
-                        <button class="btn-hover px-2 py-1  rounded border text-center bg-light">1TB SSD
+                        <button  id="1TB-storage-btn" class="btn-hover px-2 py-1  rounded border text-center bg-light">1TB SSD
                             storage</button>
 
 
                     </div>
                     <div class="my-5">
                         <h4>Choose your delivery option</h4>
-                        <button class="btn-hover px-2 py-1 rounded border text-center bg-light">Friday,Aug 25 FREE Prime
+                        <button id="in-prime-date"
+                         class="btn-hover px-2 py-1 rounded border text-center bg-light">Friday,Aug 25 FREE Prime
                             Delivery</button>
 
-                        <button class="btn-hover px-2 py-1  rounded border text-center bg-light">Friday,Aug 21 Delivery
+                        <button id="before-prime-date" class="btn-hover px-2 py-1  rounded border text-center bg-light">Friday,Aug 21 Delivery
                             charge
                             $20</button>
 
@@ -74,23 +75,29 @@
                                     <th scope="col">Best Price</th>
                                     <th scope="col">$1299</th>
                                 </tr>
+
                                 <tr>
                                     <th scope="col">Extra Memory Cost</th>
-                                    <th scope="col">$0</th>
+                                    <th scope="col">$ <span id="memory-cost">0</span></th>
                                 </tr>
+
+
+
+
+
                                 <tr>
                                     <th scope="col">Extra storage cost</th>
-                                    <th scope="col">$0</th>
+                                    <th scope="col">$<span id="storage-cost">0</span></th>
                                 </tr>
                                 <tr>
                                     <th scope="col">Delivery charge</th>
-                                    <th scope="col">$0</th>
+                                    <th scope="col">$<span id="shipping-cost">0</span></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <th scope="col">Total Price
                                 </th>
-                                <th scope="col">$1299</th>
+                                <th scope="col">$<span id="total-price">1299</span></th>
 
                             </tbody>
                         </table>
