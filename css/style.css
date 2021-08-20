@@ -1,0 +1,6 @@
+/* button hover style */
+.btn-hover:hover {
+    background-image: linear-gradient(180deg, #110e10 -0.01%, #1a1919 99.99%);
+    color: white;
+
+}
