@@ -74,11 +74,11 @@ function calculateTotal() {
 
 }
 
-// handle extra total cost 
+// extra total cost handle
 function extraTotal() {
-    const caseTotal = document.getElementById('extra-total-cost');
+    const extraTotalCost = document.getElementById('extra-total-cost');
     const total = document.getElementById('total-price');
-    caseTotal.innerText = total.innerText;
+    extraTotalCost.innerText = total.innerText;
 }
 
 //memory cost events
@@ -114,6 +114,27 @@ document.getElementById('before-prime-date').addEventListener('click', function 
 document.getElementById('in-prime-date').addEventListener('click', function () {
     shippingButton(false);
 
+});
+
+//extra part
+// pomo code events handled
+document.getElementById('pomo-code-button').addEventListener('click', function () {
+    //get user email
+    const inputId = document.getElementById('pomo-code-input');
+    const inputField = inputId.value;
+
+    //check email and password
+    if (inputField == 'stevekaku') {
+        const extraTotalCost = document.getElementById('extra-total-cost');
+        const extratotalCostValueText = extraTotalCost.innerText;
+        const extratotalCostValue = parseInt(extratotalCostValueText);
+
+        const total = extratotalCostValue - (extratotalCostValue * 0.2);
+        extraTotalCost.innerText = total;
+    }
+
+    //clear input Field
+    inputId.value = '';
 });
 
 
