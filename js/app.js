@@ -8,8 +8,10 @@ function memorybutton(isExtraMemory) {
         memoryField.innerText = 0;
     }
 
-    //update total
+    //update extra
     calculateTotal();
+    // extra total cost
+    extraTotal();
 
 }
 
@@ -29,6 +31,8 @@ function storageButton(isExtraStorage, storage) {
     }
     //update total
     calculateTotal();
+    // extra total cost
+    extraTotal();
 }
 
 // handle shipping events
@@ -43,6 +47,10 @@ function shippingButton(isBeforedate) {
 
     //update total
     calculateTotal();
+    // extra total cost
+    extraTotal();
+
+
 }
 
 //Total cost events
@@ -51,6 +59,7 @@ function getCostValue(product) {
     const productCosts = parseInt(costField.innerText);
     return productCosts;
 }
+
 function calculateTotal() {
     const memoryTotal = getCostValue('memory');
     const storageTotal = getCostValue('storage');
@@ -62,8 +71,15 @@ function calculateTotal() {
     document.getElementById('storage-cost').innerText = storageTotal;
     document.getElementById('shipping-cost').innerText = shippingTotal;
     document.getElementById('total-price').innerText = totalPrice;
+
 }
 
+// handle extra total cost 
+function extraTotal() {
+    const caseTotal = document.getElementById('extra-total-cost');
+    const total = document.getElementById('total-price');
+    caseTotal.innerText = total.innerText;
+}
 
 //memory cost events
 document.getElementById('16GB-memory-btn').addEventListener('click', function () {
@@ -99,3 +115,6 @@ document.getElementById('in-prime-date').addEventListener('click', function () {
     shippingButton(false);
 
 });
+
+
+
